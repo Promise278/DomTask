@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+
+    <div id="body"></div>
+
+    <script>
+        let body = document.getElementById("body")
+
+        let header = document.createElement("h1")
+        header.innerHTML = "STUDENT DATABASE";
+        body.appendChild(header);
+
+        let biodata = document.createElement("p")
+        biodata.innerHTML = "Data: Im an igbo boy from Anambra im a software developer and a web developer in blockfuse labs currently learning javascript and im really grateful to be here";
+        body.appendChild(biodata);
+
+        let hobbies = document.createElement("p")
+        hobbies.innerHTML = "Hobbies: I love writing code and loving listening music and videos and also love playing games";
+        body.appendChild(hobbies);
+
+        let techstack = document.createElement("p")
+        techstack.innerHTML = "TechStack: My Tech stack is HTML CSS TAILWIND REACT JAVASCRIPT REACT-NATIVE";
+        body.appendChild(techstack);
+    </script>
+</body>
+</html>
