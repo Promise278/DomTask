@@ -16,16 +16,16 @@
     <div id="ss3"></div>
 
 
-    <!-- <h2 class="text-center">GRADE(A)</h2>
+    <!-- <h2 class="text-center">GRADE(A)</h2> -->
     <div id="gradeA"></div>
-    <h2 class="text-center">GRADE(B)</h2>
+    <!-- <h2 class="text-center">GRADE(B)</h2> -->
     <div id="gradeB"></div>
-    <h2 class="text-center">GRADE(C)</h2>
+    <!-- <h2 class="text-center">GRADE(C)</h2> -->
     <div id="gradeC"></div>
-    <h2 class="text-center">GRADE(D)</h2>
+    <!-- <h2 class="text-center">GRADE(D)</h2> -->
     <div id="gradeD"></div>
-    <h2 class="text-center">GRADE(F)</h2>
-    <div id="gradeF"></div> -->
+    <!-- <h2 class="text-center">GRADE(F)</h2> -->
+    <div id="gradeF"></div>
 
 
     <script>
@@ -87,6 +87,37 @@
         let ss3Container = document.querySelector("#ss3")
         ss3Container.className = "pl-2 pt-6"
         ss3Container.innerHTML = ss3
+
+
+        let gradeA = "<h2><b>STUDENT IN GRADE[A]</b></h2><ul>"
+        let gradeB = "<h2><b>STUDENT IN GRADE[B]</b></h2><ul>"
+        let gradeC = "<h2><b>STUDENT IN GRADE[C]</b></h2><ul>"
+        let gradeD = "<h2><b>STUDENT IN GRADE[D]</b></h2><ul>"
+        let gradeF = "<h2><b>STUDENT IN GRADE[F]</b></h2><ul>"
+        studentarray.filter(student => {
+            if (student.score > 75) {
+                gradeA+= `<li> <strong>Name:</strong> ${student.name} <strong>Grade:</strong>A</li>`
+            } else if (student.score < 70) {
+               gradeB+= `<li> <strong>Name:</strong> ${student.name} <strong>Grade:</strong>B</li>` 
+            } else if (student.score < 50) {
+                gradeC+= `<li> <strong>Name:</strong> ${student.name} <strong>Grade:</strong>C</li>` 
+            }
+        })
+
+        gradeA+= "</ul>"
+        let gradeAContainer = document.querySelector("#gradeA")
+        gradeAContainer.className = "pl-2 pt-6"
+        gradeAContainer.innerHTML = gradeA
+
+        gradeB+= "</ul>"
+        let gradeBContainer = document.querySelector("#gradeB")
+        gradeBContainer.className = "pl-2 pt-6"
+        gradeBContainer.innerHTML = gradeB
+
+        gradeC+= "</ul>"
+        let gradeCContainer = document.querySelector("#gradeC")
+        gradeCContainer.className = "pl-2 pt-6"
+        gradeCContainer.innerHTML = gradeC
 
     </script>
 
